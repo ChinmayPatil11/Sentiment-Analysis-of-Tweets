@@ -62,7 +62,6 @@ nltk==3.5
 notebook==6.0.3
 numpy==1.19.5
 oauthlib==3.1.0
-opencv-python==4.5.1.48
 opt-einsum==3.3.0
 packaging==20.4
 pandas==1.0.5
@@ -82,7 +81,6 @@ pyparsing==2.4.7
 pyrsistent==0.16.0
 PySocks==1.7.1
 python-dateutil==2.8.1
-pytz==2020.1
 pywin32==228
 pywinpty==0.5.7
 PyYAML==5.3.1
