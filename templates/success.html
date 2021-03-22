@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href= '{{ url_for('static',filename='result.css')}}'>
+  <title>Results</title>
+</head>
+<body>
+  {% for table in tables %}
+        {{titles[loop.index]}}
+        {{ table|safe }}
+  {% endfor %}
+
+  <img src={{url}} alt="Chart" height="42" width="42">
+</body>
