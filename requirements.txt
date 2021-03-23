@@ -2,7 +2,6 @@ absl-py==0.11.0
 astunparse==1.6.3
 attrs==19.3.0
 backcall==0.2.0
-beautifulsoup4==4.9.1
 bleach==3.1.5
 blis==0.4.1
 boto==2.49.0
@@ -20,12 +19,10 @@ Cython==0.29.14
 decorator==4.4.2
 defusedxml==0.6.0
 docutils==0.15.2
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
 entrypoints==0.3
 Flask==1.1.2
 flatbuffers==1.12
 gast==0.3.3
-gensim==3.8.3
 google-auth==1.19.2
 google-auth-oauthlib==0.4.1
 google-pasta==0.2.0
@@ -89,7 +86,6 @@ Send2Trash==1.5.0
 six==1.15.0
 smart-open==2.1.1
 soupsieve==2.0.1
-spacy==2.3.2
 srsly==1.0.2
 tensorboard==2.4.1
 tensorboard-plugin-wit==1.7.0
@@ -105,7 +101,6 @@ tqdm==4.48.2
 traitlets==4.3.3
 tweepy==3.9.0
 typing-extensions==3.7.4.3
-urllib3==1.25.10
 wasabi==0.8.0
 wcwidth==0.2.5
 webencodings==0.5.1
