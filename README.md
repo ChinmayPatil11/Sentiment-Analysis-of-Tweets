@@ -9,6 +9,7 @@ This project was created as a part of our college curriculum requirement and als
 #### Technical Aspect
 The project is trained using a deep learning model created using Keras.  
 It is hosted using Flask as a website.
+The input keyword from the user is used as the input to the Twitter API from where the tweets regarding the keyword are extracted.
 
 #### Technologies Used
 - Python
