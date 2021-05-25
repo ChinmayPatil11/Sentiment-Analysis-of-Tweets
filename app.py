@@ -10,9 +10,9 @@ from clean_data import clean, tokenize, make_predict, remove_usernames, remove_h
 
 
 app = Flask(__name__)
-#model = h5py.File('classification_model.h5','r+')
 model = load_model('classification_model.h5')
 global tweets
+global dictionary
 
 def request_results(name):
     tweets = get_related_tweets(name)
@@ -31,7 +31,7 @@ def request_results(name):
     preds = make_predict(preds)
     tweets['prediction'] = preds
     tweets['prediction'] = tweets['prediction'].replace({0:'negative',1:'positive'})
-    return (tweets)
+    return tweets
 
 @app.route("/")
 def home():
@@ -47,11 +47,9 @@ def get_data(): #name
 @app.route('/success/<name>')
 def success(name):
     tweets = request_results(name)
-    #no_of_tweets = tweets['prediction'].value_counts()
-    #plt.bar(no_of_tweets.index, no_of_tweets)
-    #plt.savefig('/static/images/plot.png')
     output_tweets = tweets.drop(['created_at','tweet_id','length'],axis=1)
-    return render_template('success.html',tables=[output_tweets.to_html(classes='data')], titles=tweets.columns.values)
+    dictionary = dict(zip(tweets['tweet_text'],tweets['prediction']))
+    return render_template('success.html',lines=dictionary)
 
 if __name__ == '__main__':
     app.run(debug=True)
