@@ -10,6 +10,7 @@ This project was created as a part of our college curriculum requirement and als
 The project is trained using a deep learning model created using Keras.  
 It is hosted using Flask as a website.
 The input keyword from the user is used as the input to the Twitter API from where the tweets regarding the keyword are extracted.
+Sentiment Analysis is performed on these extracted tweets.
 
 #### Technologies Used
 - Python
@@ -20,3 +21,4 @@ The input keyword from the user is used as the input to the Twitter API from whe
 #### Team
 [Pranay Yadav](https://github.com/gh0sty02)  
 [Parag Wayangankar](https://github.com/parag1909)
+[Chinmay Patil](https://github.com/ChinmayPatil11)
