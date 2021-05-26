@@ -2,13 +2,22 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href= '{{ url_for('static',filename='result.css')}}'>
-  <title>Results</title>
+  <title>Sentiment Analysis</title>
+
 </head>
 <body>
-  {% for table in tables %}
-        {{titles[loop.index]}}
-        {{ table|safe }}
-  {% endfor %}
+  <table class="centered thick-border">
+          <tr>
+                  <th>Text</th>
+                  <th>Sentiment</th>
+          </tr>
+          {% for k, v in lines.items() %}
+                  <tr>
+                          <td>{{ k }}</td>
+                          <td>{{ v }}</td>
+                  </tr>
+          {% endfor %}
+  </table>
 
-  <img src={{url}} alt="Chart" height="42" width="42">
+
 </body>
