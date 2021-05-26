@@ -49,7 +49,6 @@ def get_data(): #name
 def success(name):
     tweets = request_results(name)
     output_tweets = tweets.drop(['created_at','tweet_id','length'],axis=1)
-    entities = entity_recognizer(output_tweets)
     dictionary = dict(zip(tweets['tweet_text'],tweets['prediction']))
     return render_template('success.html',lines=dictionary)
 
