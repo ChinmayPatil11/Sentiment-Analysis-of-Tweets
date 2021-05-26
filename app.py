@@ -31,10 +31,7 @@ def request_results(name):
     preds = make_predict(preds)
     tweets['prediction'] = preds
     tweets['prediction'] = tweets['prediction'].replace({0:'negative',1:'positive'})
-<<<<<<< HEAD
 
-=======
->>>>>>> 00b85cdede6f96887b8e6d8fda382fcd69652bfe
     return tweets
 
 @app.route("/")
@@ -52,17 +49,8 @@ def get_data(): #name
 def success(name):
     tweets = request_results(name)
     output_tweets = tweets.drop(['created_at','tweet_id','length'],axis=1)
-<<<<<<< HEAD
-    entities = entity_recognizer(output_tweets)
-    dictionary = dict(zip(tweets['tweet_text'],tweets['prediction']))
-    #print(entities)
-    #return render_template('success.html',tables=[output_tweets.to_html(classes='data')]
-    #                        , titles=tweets.columns.values,all_entities=dictionary)
-    return render_template('success.html',lines = dictionary)
-=======
     dictionary = dict(zip(tweets['tweet_text'],tweets['prediction']))
     return render_template('success.html',lines=dictionary)
->>>>>>> 00b85cdede6f96887b8e6d8fda382fcd69652bfe
 
 if __name__ == '__main__':
     app.run(debug=True)
