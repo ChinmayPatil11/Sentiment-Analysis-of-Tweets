@@ -49,17 +49,9 @@ def get_data(): #name
 def success(name):
     tweets = request_results(name)
     output_tweets = tweets.drop(['created_at','tweet_id','length'],axis=1)
-<<<<<<< HEAD
     entities = entity_recognizer(output_tweets)
     dictionary = dict(zip(tweets['tweet_text'],tweets['prediction']))
-    #print(entities)
-    #return render_template('success.html',tables=[output_tweets.to_html(classes='data')]
-    #                        , titles=tweets.columns.values,all_entities=dictionary)
-    return render_template('success.html',lines = dictionary)
-=======
-    dictionary = dict(zip(tweets['tweet_text'],tweets['prediction']))
     return render_template('success.html',lines=dictionary)
->>>>>>> a2b7a273439fac9cf0a2a0fb1604ede4de635a7a
 
 if __name__ == '__main__':
     app.run(debug=True)
