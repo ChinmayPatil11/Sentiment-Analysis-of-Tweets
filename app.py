@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from tensorflow import keras
 from keras.models import load_model
 from clean_data import clean, tokenize, make_predict, remove_usernames, remove_hashtags, remove_emails,remove_urls, remove_numbers, remove_punctuation, remove_stopwords, lemmatizer
-from entity_finder import entity_recognizer
 
 app = Flask(__name__)
 #model = h5py.File('classification_model.h5','r+')
